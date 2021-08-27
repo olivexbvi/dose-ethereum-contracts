@@ -1,0 +1,550 @@
+{
+  "contractName": "RootChainManagerProxy",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_proxyTo",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_new",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_old",
+          "type": "address"
+        }
+      ],
+      "name": "ProxyOwnerUpdate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_new",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_old",
+          "type": "address"
+        }
+      ],
+      "name": "ProxyUpdated",
+      "type": "event"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "proxyOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "proxyType",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "proxyTypeId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferProxyOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newProxyTo",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "updateAndCall",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newProxyTo",
+          "type": "address"
+        }
+      ],
+      "name": "updateImplementation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_proxyTo\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_new\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_old\",\"type\":\"address\"}],\"name\":\"ProxyOwnerUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_new\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_old\",\"type\":\"address\"}],\"name\":\"ProxyUpdated\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxyOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxyType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"proxyTypeId\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferProxyOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newProxyTo\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"updateAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newProxyTo\",\"type\":\"address\"}],\"name\":\"updateImplementation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/root/RootChainManager/RootChainManagerProxy.sol\":\"RootChainManagerProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/common/Proxy/IERCProxy.sol\":{\"keccak256\":\"0x6d36e1fad8e8dfc8d9942b7e776c8f5d52a2830ab875fd15ef0c4474018fdcb4\",\"urls\":[\"bzz-raw://cba1084dc72397d8debb6477e706e6e4386b65a82e0f4a10b93f0e9739952481\",\"dweb:/ipfs/QmejRmsmhRs75AMVLRZSRpPHi9N47dRaEbz5f16HxwVQt8\"]},\"/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/common/Proxy/Proxy.sol\":{\"keccak256\":\"0xbc9341429e641799875e317a99d32a1023e58ad508e85e2174e43062bdd94897\",\"urls\":[\"bzz-raw://3a3d9d51e3aa8965b6784b95b6912c63f8e5e744e26d512310897b55ba0b9b39\",\"dweb:/ipfs/QmTkTQp84UteiBQbJZkfvWCETLaSrWjVPHTpnbwvbfVdNr\"]},\"/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/common/Proxy/UpgradableProxy.sol\":{\"keccak256\":\"0x5deb5d946f3d6a69dec427ead4a2d0c898cf2bbd161ca962ce29106b9458e00a\",\"urls\":[\"bzz-raw://02dff8151886ea03ea4880803b1bd05a9b4c130ffa30143bd2ff53405b7d6cd3\",\"dweb:/ipfs/QmTcqNdduh2FaNPM293BNgZfj5S1avpG6kPPLQ9hd8bAJt\"]},\"/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/root/RootChainManager/RootChainManagerProxy.sol\":{\"keccak256\":\"0x6418476da7b4c410a48c6fddb1f202352a478d51f974e525d9651ec2e245225b\",\"urls\":[\"bzz-raw://fad3094747df65e6ec4f9549782fe3cb2d2e654f8dab3a9f7e050968882971d0\",\"dweb:/ipfs/QmQowmrESMQZqYSJXrexRFrRkgspqE9EUAjqbDusuZXM6Y\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108783803806108788339818101604052602081101561003357600080fd5b505180610048336001600160e01b0361006116565b61005a816001600160e01b0361009616565b50506100b8565b604080517f6d617469632e6e6574776f726b2e70726f78792e6f776e6572000000000000008152905190819003601901902055565b6000604051808061085660229139604051908190036022019020929092555050565b61078f806100c76000396000f3fe6080604052600436106100595760003560e01c8063025313a2146100b3578063025b22bc146100e45780634555d5c9146101175780635c60da1b1461013e578063d88ca2c814610153578063f1739cae14610209576100a8565b366100a8576100a661006961023c565b6000368080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525061026292505050565b005b6100a661006961023c565b3480156100bf57600080fd5b506100c861028a565b604080516001600160a01b039092168252519081900360200190f35b3480156100f057600080fd5b506100a66004803603602081101561010757600080fd5b50356001600160a01b0316610299565b34801561012357600080fd5b5061012c6103d3565b60408051918252519081900360200190f35b34801561014a57600080fd5b506100c86103d8565b6100a66004803603604081101561016957600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561019457600080fd5b8201836020820111156101a657600080fd5b803590602001918460018302840111640100000000831117156101c857600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506103e2945050505050565b34801561021557600080fd5b506100a66004803603602081101561022c57600080fd5b50356001600160a01b0316610578565b600080600060405180806107386022913960405190819003602201902054935050505090565b600080825160208401856127105a03f43d604051816000823e828015610286578282f35b8282fd5b600061029461066a565b905090565b336102a261066a565b6001600160a01b0316146102e9576040805162461bcd60e51b81526020600482015260096024820152682727aa2fa7aba722a960b91b604482015290519081900360640190fd5b6001600160a01b03811661033c576040805162461bcd60e51b8152602060048201526015602482015274494e56414c49445f50524f58595f4144445245535360581b604482015290519081900360640190fd5b6103458161069c565b6103805760405162461bcd60e51b81526004018080602001828103825260258152602001806107136025913960400191505060405180910390fd5b61038861023c565b6001600160a01b0316816001600160a01b03167fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e160405160405180910390a36103d0816106bf565b50565b600290565b600061029461023c565b336103eb61066a565b6001600160a01b031614610432576040805162461bcd60e51b81526020600482015260096024820152682727aa2fa7aba722a960b91b604482015290519081900360640190fd5b61043b82610299565b60006060306001600160a01b031634846040518082805190602001908083835b6020831061047a5780518252601f19909201916020918201910161045b565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d80600081146104dc576040519150601f19603f3d011682016040523d82523d6000602084013e6104e1565b606091505b50915091508181906105715760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561053657818101518382015260200161051e565b50505050905090810190601f1680156105635780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b5050505050565b3361058161066a565b6001600160a01b0316146105c8576040805162461bcd60e51b81526020600482015260096024820152682727aa2fa7aba722a960b91b604482015290519081900360640190fd5b6001600160a01b038116610612576040805162461bcd60e51b815260206004820152600c60248201526b5a45524f5f4144445245535360a01b604482015290519081900360640190fd5b7fdbe5fd65bcdbae152f24ab660ea68e72b4d4705b57b16e0caae994e214680ee28161063c61066a565b604080516001600160a01b03938416815291909216602082015281519081900390910190a16103d0816106e1565b604080517836b0ba34b1973732ba3bb7b93597383937bc3c9737bbb732b960391b815290519081900360190190205490565b60006001600160a01b0382166106b4575060006106ba565b50803b15155b919050565b6000604051808061073860229139604051908190036022019020929092555050565b604080517836b0ba34b1973732ba3bb7b93597383937bc3c9737bbb732b960391b815290519081900360190190205556fe44455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e54524143546d617469632e6e6574776f726b2e70726f78792e696d706c656d656e746174696f6ea264697066735822122054621b3340980ba33420790541736bae517ae1dea49fea0cca991937bb5013c664736f6c634300060600336d617469632e6e6574776f726b2e70726f78792e696d706c656d656e746174696f6e",
+  "deployedBytecode": "0x6080604052600436106100595760003560e01c8063025313a2146100b3578063025b22bc146100e45780634555d5c9146101175780635c60da1b1461013e578063d88ca2c814610153578063f1739cae14610209576100a8565b366100a8576100a661006961023c565b6000368080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525061026292505050565b005b6100a661006961023c565b3480156100bf57600080fd5b506100c861028a565b604080516001600160a01b039092168252519081900360200190f35b3480156100f057600080fd5b506100a66004803603602081101561010757600080fd5b50356001600160a01b0316610299565b34801561012357600080fd5b5061012c6103d3565b60408051918252519081900360200190f35b34801561014a57600080fd5b506100c86103d8565b6100a66004803603604081101561016957600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561019457600080fd5b8201836020820111156101a657600080fd5b803590602001918460018302840111640100000000831117156101c857600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506103e2945050505050565b34801561021557600080fd5b506100a66004803603602081101561022c57600080fd5b50356001600160a01b0316610578565b600080600060405180806107386022913960405190819003602201902054935050505090565b600080825160208401856127105a03f43d604051816000823e828015610286578282f35b8282fd5b600061029461066a565b905090565b336102a261066a565b6001600160a01b0316146102e9576040805162461bcd60e51b81526020600482015260096024820152682727aa2fa7aba722a960b91b604482015290519081900360640190fd5b6001600160a01b03811661033c576040805162461bcd60e51b8152602060048201526015602482015274494e56414c49445f50524f58595f4144445245535360581b604482015290519081900360640190fd5b6103458161069c565b6103805760405162461bcd60e51b81526004018080602001828103825260258152602001806107136025913960400191505060405180910390fd5b61038861023c565b6001600160a01b0316816001600160a01b03167fd32d24edea94f55e932d9a008afc425a8561462d1b1f57bc6e508e9a6b9509e160405160405180910390a36103d0816106bf565b50565b600290565b600061029461023c565b336103eb61066a565b6001600160a01b031614610432576040805162461bcd60e51b81526020600482015260096024820152682727aa2fa7aba722a960b91b604482015290519081900360640190fd5b61043b82610299565b60006060306001600160a01b031634846040518082805190602001908083835b6020831061047a5780518252601f19909201916020918201910161045b565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d80600081146104dc576040519150601f19603f3d011682016040523d82523d6000602084013e6104e1565b606091505b50915091508181906105715760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561053657818101518382015260200161051e565b50505050905090810190601f1680156105635780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b5050505050565b3361058161066a565b6001600160a01b0316146105c8576040805162461bcd60e51b81526020600482015260096024820152682727aa2fa7aba722a960b91b604482015290519081900360640190fd5b6001600160a01b038116610612576040805162461bcd60e51b815260206004820152600c60248201526b5a45524f5f4144445245535360a01b604482015290519081900360640190fd5b7fdbe5fd65bcdbae152f24ab660ea68e72b4d4705b57b16e0caae994e214680ee28161063c61066a565b604080516001600160a01b03938416815291909216602082015281519081900390910190a16103d0816106e1565b604080517836b0ba34b1973732ba3bb7b93597383937bc3c9737bbb732b960391b815290519081900360190190205490565b60006001600160a01b0382166106b4575060006106ba565b50803b15155b919050565b6000604051808061073860229139604051908190036022019020929092555050565b604080517836b0ba34b1973732ba3bb7b93597383937bc3c9737bbb732b960391b815290519081900360190190205556fe44455354494e4154494f4e5f414444524553535f49535f4e4f545f415f434f4e54524143546d617469632e6e6574776f726b2e70726f78792e696d706c656d656e746174696f6ea264697066735822122054621b3340980ba33420790541736bae517ae1dea49fea0cca991937bb5013c664736f6c63430006060033",
+  "immutableReferences": {},
+  "sourceMap": "97:143:32:-:0;;;153:85;5:9:-1;2:2;;;27:1;24;17:12;2:2;153:85:32;;;;;;;;;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;153:85:32;;439:25:24;453:10;-1:-1:-1;;;;;439:13:24;:25;:::i;:::-;474:27;492:8;-1:-1:-1;;;;;474:17:24;:27;:::i;:::-;392:116;153:85:32;97:143;;1721:163:24;347:38;;;;;;;;;;;;;;;;1842:26;1828:50::o;2532:182::-;2598:16;264:47;;;;;;;;;;;;;;;;;;2669:29;;;;-1:-1:-1;;2655:53:24:o;97:143:32:-;;;;;;;",
+  "deployedSourceMap": "97:143:32:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;646:44:24;659:20;:18;:20::i;:::-;681:8;;646:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;646:12:24;;-1:-1:-1;;;646:44:24:i;:::-;97:143:32;;552:44:24;565:20;:18;:20::i;815:93::-;;5:9:-1;2:2;;;27:1;24;17:12;2:2;815:93:24;;;:::i;:::-;;;;-1:-1:-1;;;;;815:93:24;;;;;;;;;;;;;;1890:346;;5:9:-1;2:2;;;27:1;24;17:12;2:2;1890:346:24;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;1890:346:24;-1:-1:-1;;;;;1890:346:24;;:::i;986:143:23:-;;5:9:-1;2:2;;;27:1;24;17:12;2:2;986:143:23;;;:::i;:::-;;;;;;;;;;;;;;;;1137:111:24;;5:9:-1;2:2;;;27:1;24;17:12;2:2;1137:111:24;;;:::i;2242:284::-;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;;;;;2242:284:24;;;;;;;;;;;;;;;27:11:-1;11:28;;8:2;;;52:1;49;42:12;8:2;2242:284:24;;41:9:-1;34:4;18:14;14:25;11:40;8:2;;;64:1;61;54:12;8:2;2242:284:24;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;2242:284:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;2242:284:24;;-1:-1:-1;2242:284:24;;-1:-1:-1;;;;;2242:284:24:i;1487:228::-;;5:9:-1;2:2;;;27:1;24;17:12;2:2;1487:228:24;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;1487:228:24;-1:-1:-1;;;;;1487:228:24;;:::i;1254:227::-;1306:7;1325:13;1348:16;264:47;;;;;;;;;;;;;;;;;;1428:15;;-1:-1:-1;;;;1254:227:24;:::o;110:870:23:-;468:1;449;421:9;415:16;392:4;381:9;377:20;355:4;331:5;324;320:17;290:193;508:16;555:4;549:11;596:4;593:1;588:3;573:28;795:6;818:64;;;;941:4;936:3;929:17;818:64;859:4;854:3;847:17;815:93:24;859:7;885:16;:14;:16::i;:::-;878:23;;815:93;:::o;1890:346::-;767:10;747:16;:14;:16::i;:::-;-1:-1:-1;;;;;747:30:24;;739:52;;;;;-1:-1:-1;;;739:52:24;;;;;;;;;;;;-1:-1:-1;;;739:52:24;;;;;;;;;;;;;;;-1:-1:-1;;;;;1981:27:24;::::1;1973:61;;;::::0;;-1:-1:-1;;;1973:61:24;;::::1;;::::0;::::1;::::0;::::1;::::0;;;;-1:-1:-1;;;1973:61:24;;;;;;;;;;;;;::::1;;2052:23;2063:11;2052:10;:23::i;:::-;2044:73;;;;-1:-1:-1::0;;;2044:73:24::1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2159:20;:18;:20::i;:::-;-1:-1:-1::0;;;;;2133:47:24::1;2146:11;-1:-1:-1::0;;;;;2133:47:24::1;;;;;;;;;;;2199:30;2217:11;2199:17;:30::i;:::-;1890:346:::0;:::o;986:143:23:-;1121:1;;986:143::o;1137:111:24:-;1195:7;1221:20;:18;:20::i;2242:284::-;767:10;747:16;:14;:16::i;:::-;-1:-1:-1;;;;;747:30:24;;739:52;;;;;-1:-1:-1;;;739:52:24;;;;;;;;;;;;-1:-1:-1;;;739:52:24;;;;;;;;;;;;;;;2345:33:::1;2366:11;2345:20;:33::i;:::-;2390:12;2404:23;2439:4;-1:-1:-1::0;;;;;2431:18:24::1;2457:9;2468:4;2431:42;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;176:10:::0;;164:23;;-1:-1;;139:12;;;;98:2:::1;89:12:::0;;::::1;::::0;114::::1;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;2431:42:24;;;;;;;;;;;;;;;;;;;;;;;;;12:1:-1;19;14:27;;;;67:4;61:11;56:16;;134:4;130:9;123:4;105:16;101:27;97:43;94:1;90:51;84:4;77:65;157:16;154:1;147:27;211:16;208:1;201:4;198:1;194:12;179:49;5:228;;14:27;32:4;27:9;;5:228;;2389:84:24;;;;2491:7;2507:10;2483:36;;;;;-1:-1:-1::0;;;2483:36:24::1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11:::0;;::::1;84:18:::0;71:11;;::::1;64:39:::0;52:2:::1;45:10;8:100;;;12:14;2483:36:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;801:1;;2242:284:::0;;:::o;1487:228::-;767:10;747:16;:14;:16::i;:::-;-1:-1:-1;;;;;747:30:24;;739:52;;;;;-1:-1:-1;;;739:52:24;;;;;;;;;;;;-1:-1:-1;;;739:52:24;;;;;;;;;;;;;;;-1:-1:-1;;;;;1577:22:24;::::1;1569:47;;;::::0;;-1:-1:-1;;;1569:47:24;;::::1;;::::0;::::1;::::0;::::1;::::0;;;;-1:-1:-1;;;1569:47:24;;;;;;;;;;;;;::::1;;1631:44;1648:8;1658:16;:14;:16::i;:::-;1631:44;::::0;;-1:-1:-1;;;;;1631:44:24;;::::1;::::0;;;;;::::1;;::::0;::::1;::::0;;;;;;;;;;;::::1;1685:23;1699:8;1685:13;:23::i;914:217::-:0;347:38;;;-1:-1:-1;;;347:38:24;;;;;;;;;;;;1077:15;914:217;:::o;2724:264::-;2784:4;-1:-1:-1;;;;;2804:21:24;;2800:64;;-1:-1:-1;2848:5:24;2841:12;;2800:64;-1:-1:-1;2927:20:24;;2973:8;;2724:264;;;;:::o;2532:182::-;2598:16;264:47;;;;;;;;;;;;;;;;;;2669:29;;;;-1:-1:-1;;2655:53:24:o;1721:163::-;347:38;;;-1:-1:-1;;;347:38:24;;;;;;;;;;;;1842:26;1828:50::o",
+  "source": "pragma solidity 0.6.6;\n\nimport {UpgradableProxy} from \"../../common/Proxy/UpgradableProxy.sol\";\n\ncontract RootChainManagerProxy is UpgradableProxy {\n    constructor(address _proxyTo)\n        public\n        UpgradableProxy(_proxyTo)\n    {}\n}\n",
+  "sourcePath": "/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/root/RootChainManager/RootChainManagerProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/root/RootChainManager/RootChainManagerProxy.sol",
+    "exportedSymbols": {
+      "RootChainManagerProxy": [
+        5604
+      ]
+    },
+    "id": 5605,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5590,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:32"
+      },
+      {
+        "absolutePath": "/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/common/Proxy/UpgradableProxy.sol",
+        "file": "../../common/Proxy/UpgradableProxy.sol",
+        "id": 5592,
+        "nodeType": "ImportDirective",
+        "scope": 5605,
+        "sourceUnit": 3326,
+        "src": "24:71:32",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5591,
+              "name": "UpgradableProxy",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "32:15:32",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5593,
+              "name": "UpgradableProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3325,
+              "src": "131:15:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UpgradableProxy_$3325",
+                "typeString": "contract UpgradableProxy"
+              }
+            },
+            "id": 5594,
+            "nodeType": "InheritanceSpecifier",
+            "src": "131:15:32"
+          }
+        ],
+        "contractDependencies": [
+          3014,
+          3047,
+          3325
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5604,
+        "linearizedBaseContracts": [
+          5604,
+          3325,
+          3047,
+          3014
+        ],
+        "name": "RootChainManagerProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 5602,
+              "nodeType": "Block",
+              "src": "236:2:32",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5603,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 5599,
+                    "name": "_proxyTo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5596,
+                    "src": "222:8:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 5600,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5598,
+                  "name": "UpgradableProxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3325,
+                  "src": "206:15:32",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_UpgradableProxy_$3325_$",
+                    "typeString": "type(contract UpgradableProxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "206:25:32"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5596,
+                  "mutability": "mutable",
+                  "name": "_proxyTo",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5603,
+                  "src": "165:16:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5595,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "165:7:32",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "164:18:32"
+            },
+            "returnParameters": {
+              "id": 5601,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "236:0:32"
+            },
+            "scope": 5604,
+            "src": "153:85:32",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5605,
+        "src": "97:143:32"
+      }
+    ],
+    "src": "0:241:32"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/root/RootChainManager/RootChainManagerProxy.sol",
+    "exportedSymbols": {
+      "RootChainManagerProxy": [
+        5604
+      ]
+    },
+    "id": 5605,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5590,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:32"
+      },
+      {
+        "absolutePath": "/Users/nathan/Workspace/ethereum/matic/pos-portal/contracts/common/Proxy/UpgradableProxy.sol",
+        "file": "../../common/Proxy/UpgradableProxy.sol",
+        "id": 5592,
+        "nodeType": "ImportDirective",
+        "scope": 5605,
+        "sourceUnit": 3326,
+        "src": "24:71:32",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5591,
+              "name": "UpgradableProxy",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "32:15:32",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5593,
+              "name": "UpgradableProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3325,
+              "src": "131:15:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UpgradableProxy_$3325",
+                "typeString": "contract UpgradableProxy"
+              }
+            },
+            "id": 5594,
+            "nodeType": "InheritanceSpecifier",
+            "src": "131:15:32"
+          }
+        ],
+        "contractDependencies": [
+          3014,
+          3047,
+          3325
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5604,
+        "linearizedBaseContracts": [
+          5604,
+          3325,
+          3047,
+          3014
+        ],
+        "name": "RootChainManagerProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 5602,
+              "nodeType": "Block",
+              "src": "236:2:32",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5603,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 5599,
+                    "name": "_proxyTo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5596,
+                    "src": "222:8:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 5600,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5598,
+                  "name": "UpgradableProxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3325,
+                  "src": "206:15:32",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_UpgradableProxy_$3325_$",
+                    "typeString": "type(contract UpgradableProxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "206:25:32"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5596,
+                  "mutability": "mutable",
+                  "name": "_proxyTo",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5603,
+                  "src": "165:16:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5595,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "165:7:32",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "164:18:32"
+            },
+            "returnParameters": {
+              "id": 5601,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "236:0:32"
+            },
+            "scope": 5604,
+            "src": "153:85:32",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5605,
+        "src": "97:143:32"
+      }
+    ],
+    "src": "0:241:32"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-07-08T21:49:32.379Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

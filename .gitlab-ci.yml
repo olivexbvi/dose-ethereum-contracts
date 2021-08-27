@@ -1,0 +1,33 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - test
+
+proceed_test_case_auto:
+  stage: test
+  only:
+    - master
+  tags:
+    - node
+  before_script: 
+    - nvm use stable
+    - node --version
+    - yarn
+  script:
+    - yarn test
+
+proceed_test_case_manual:
+  stage: test
+  tags:
+    - node
+  before_script: 
+    - nvm use stable
+    - node --version
+    - yarn
+  script:
+    - yarn test
+  when: manual

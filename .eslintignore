@@ -1,0 +1,16 @@
+package.json
+node_modules/
+
+artifacts*
+cache/
+imports/
+
+coverage*
+
+contracts_*
+flattened*
+
+deployments/
+exports/
+generated/
+
