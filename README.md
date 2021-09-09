@@ -5,6 +5,7 @@
 * [Setting Up](#setting-up)
 * [Getting Start](#getting-start)
 * [Test](#test)
+* [Wallet Connection](#wallet-connection)
 * [Deploy](#deploy)
     * [Preparation](#preparation)
     * [Deploy to network](#deploy-to-network)
@@ -34,7 +35,12 @@ Execute the following command to perform all test cases
 
 ```
 yarn run test
+
 ```
+
+## Wallet Connection
+
+[frame](https://frame.sh/) is used as the wallet.  For instruction, please refer to [README_COLDWALLET.md](./README_COLDWALLET.md)
 
 ## Deploy
 

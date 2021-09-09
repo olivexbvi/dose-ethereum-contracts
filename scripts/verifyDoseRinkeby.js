@@ -1,13 +1,13 @@
 const {holder, value, uri, deployedAddress} = require('./deployDoseRinkeby.json');
 const hre = require('hardhat');
-const {BN} = hre.web3.utils;
+const {toWei} = hre.web3.utils;
 
 async function main() {
   // prepare constructor values
   const payout = holder;
   const payoutValue = [];
   for (const i in value) {
-    payoutValue.push(new BN(value[i]).toString());
+    payoutValue.push(toWei(value[i], 'ether'));
   }
 
   // verify to network

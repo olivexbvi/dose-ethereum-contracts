@@ -39,4 +39,4 @@ hardhat.config.last.json
 .DS_Store
 
 hardhat.config.private.json
-scripts/deployDoseRinkeby*.json
+scripts/deployDose*.json

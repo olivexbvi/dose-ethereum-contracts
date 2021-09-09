@@ -1,4 +1,4 @@
-const {deployer, holder, value, uri} = require('./deployDoseRinkeby.json');
+const {deployer, holder, value, uri} = require('./deployDoseMainnet.json');
 const {web3} = require('hardhat');
 const {toWei} = web3.utils;
 const provider = require('eth-provider');

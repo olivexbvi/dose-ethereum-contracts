@@ -55,16 +55,17 @@
     "bits.js": "^0.1.1"
   },
   "devDependencies": {
-    "@animoca/ethereum-contracts-assets":"https://github.com/animoca/ethereum-contracts-assets.git#c999ebac8bf5a2e7df3273363cf13f74ab9e2dba",
+    "@animoca/ethereum-contracts-assets": "https://github.com/animoca/ethereum-contracts-assets.git#c999ebac8bf5a2e7df3273363cf13f74ab9e2dba",
     "@animoca/ethereum-contracts-core": "https://github.com/animoca/ethereum-contracts-core.git#11dbb82b12b2e910d7746933b91ef284366ac20d",
     "@animoca/ethereum-contracts-core-1.1.1": "https://github.com/animoca/ethereum-contracts-core.git#11dbb82b12b2e910d7746933b91ef284366ac20d",
     "@animoca/ethereum-hardhat-bootstrap": "^1.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-etherscan": "^2.1.4",
     "bip39": "^3.0.4",
+    "eth-provider": "^0.9.4",
     "ethereum-universal-forwarder": "^0.1.4",
     "ethereumjs-util": "^7.1.0",
     "ethereumjs-wallet": "^1.0.1",
-    "hardhat": "^2.4.3",
-    "@nomiclabs/hardhat-etherscan": "^2.1.4",
-    "@nomiclabs/hardhat-ethers": "^2.0.0"
+    "hardhat": "^2.4.3"
   }
 }
